@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP08 - Actividad: aplicando position</title>
+    <link rel="shortcut icon" href="assets/Favicon/icono.png" type="image/x-icon">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #F2F2F2;
+        }
+        .container {
+            width: 400px;
+            height: 400px;
+            background-color: #E0E0E0;
+            position: relative;
+        }
+        .box-top-left {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #92140c;
+        }
+        .box-top-right {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #333333;
+        }
+        .box-bottom-left {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: #5a189a;
+        }
+        .box-bottom-right {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #111d4a;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box-top-left"></div>
+        <div class="box-top-right"></div>
+        <div class="box-bottom-left"></div>
+        <div class="box-bottom-right"></div>
+    </div>
+
+</body>
+</html>
