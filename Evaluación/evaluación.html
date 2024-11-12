@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación - Tarjeta de Perfil</title>
+    <style>
+        body { /* cuerpo de la pagina */
+            background-color: rgb(243, 228, 250); /*Es el color de fondo de mi html*/
+            display: flex; /*Para centar mi container en el medio*/
+            justify-content: center; /*Para centar mi container en el medio*/
+            height: 100vh; /*Para que tome todo el tamaño de la pantalla*/
+            position: relative; /*Para poder colocar el "Conectar"*/
+        }
+        .container {
+            display: flex; /*Para que mis dos tarjetas esten en eje horizontal*/
+            justify-content: center; /*Para centrar esas tarjetas en el eje horizontal*/
+            align-items: center; /*Para centrar en el eje vertical, tomando como referencia el display: flex*/
+            gap: 10px; /*Para separar um poco mis tarjetas*/
+        }
+        .tarjetas { /*Para darle estilo a las tarjetas*/
+            width: 280px; /*El tamaño*/
+            background-color: white; /*Color de fondo de las tarjetas*/
+            border-radius: 10px; /*El redondeado de las esquinas*/
+            padding: 20px; /*El relleno interior de las tarjetas*/
+            box-shadow: 0px 0px 10px rgb(187, 187, 187); /*La sombra*/
+            position: relative; /*Para poder colocar el div estado, "Online" u "Offline"*/
+        }
+        .tarjeta-nombres { /*Para darle estilo a los nombres*/
+            font-size: 27px; /*Tamaño del texto*/
+        }
+        .tarjeta-bocacion { /*Para darle estilo a la bocación*/
+            color: rgb(109, 109, 109); /*color del texto*/
+            font-size: 19px; /*Tamaño del texto*/
+        }
+        .tarjeta-informacion { /*Para darle estilo a la información*/
+            color: rgb(109, 109, 109); /*color del texto*/
+            font-size: 19px; /*Tamaño de la fuente*/
+            text-align: center; /*centrado del texto*/
+        }
+        .boton-contactar { /*Para darle estilo al boton de "Conectar"*/
+            display: flex; /*Para poner la imagen y el texto sobre el eje horizontal*/
+            justify-content: center; /*Para centrar la imagen y el texto sobre el eje horizontal*/
+            align-items: center; /*Para centar la imagen y el texto sobre el eje vertical*/
+            gap: 7px; /*Para separar un poco la imagen y el texto*/
+            background-color: #0084ff; /*Color de fondo del boton Conectar*/
+            border-radius: 25px; /*Redondeado de bordes*/
+            color: white; /*Color del texto*/
+            position: absolute; /*Para colocar el boton Conectar en una posición determinada*/
+            right: 20px; /*A 20 pixeles de la derecha del body*/
+            bottom: 30px; /*A 30 pixeles de la parte inferior del body*/
+            padding-left: 20px; /*Relleno izquierdo del boton*/
+            padding-right: 20px; /*Relleno derecho del boton*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!--Este div es mi contenedor para las dos tarjetas-->
+        <div class="tarjetas"> <!--Este div es mi primera tarjeta-->
+            <div style="position: absolute; top: 0px; right: 12px;"> <!--Este div es el estado Online-->
+                <p style="color: white; background-color: green; border-radius: 25px; display: flex; justify-content: center; width: 50px; padding: 6px; font-size: 15px;">Online</p>
+            </div>
+            <div style="display: flex; justify-content: center;"> <!--Este div es el espacio para la imagen-->
+                <img style="border: 3px solid #0084ff; border-radius: 35px;" src="img-gris.webp" alt="espacio para imagen" width="150px" height="150px">
+            </div>
+            <div style="flex-direction: column; text-align: center; border-bottom: 1px solid #e2e2e2;"> <!--Este div es para el texto de la tarjeta-->
+                <p class="tarjeta-nombres"><b>Ana García</b></p> <!--Nombre de la persona-->
+                <p class="tarjeta-bocacion">Desarrolladora Web Frontend</p> <!--Bocación-->
+                <p class="tarjeta-informacion"> <!--Informacion-->
+                    Apasionada por crear experiencias <br>
+                    web increibles para toda la <br>
+                    comunidad de Río Negro.
+                </p>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 15px; align-items: center; margin-top: 12px; margin-bottom: 20px;"> <!--Redes sociales-->
+                <img src="tw.png" alt="Twitter" width="36px" height="20px">
+                <img src="in.png" alt="In" width="20px" height="20px">
+                <img src="git.png" alt="GitHub" width="25px" height="25px">
+            </div>
+        </div>
+        <div class="tarjetas"> <!--Este div es mi segunda tarjeta-->
+            <div style="position: absolute; top: 0px; right: 15px;"> <!--Este div es el estado Offline-->
+                <p style="color: white; background-color: rgb(133, 33, 33); border-radius: 25px; display: flex; justify-content: center; width: 50px; padding: 6px; font-size: 15px;">Offline</p>
+            </div>
+            <div style="display: flex; justify-content: center;"> <!--Este div es el espacio para la imagen-->
+                <img style="border: 3px solid #0084ff; border-radius: 35px;" src="img-gris.webp" alt="espacio para imagen" width="150px" height="150px">
+            </div>
+            <div style="flex-direction: column; text-align: center; border-bottom: 1px solid #e2e2e2;"> <!--Este div es para el texto de la tarjeta-->
+                <p class="tarjeta-nombres"><b>Mina Murray</b></p> <!--Nombre de la persona-->
+                <p class="tarjeta-bocacion">Backend Developer</p> <!--Bocación-->
+                <p class="tarjeta-informacion"> <!--Informacion-->
+                    Experiencia desarrollando micro- <br>
+                    servicios y servicios REST. <br>
+                    Experiencia en AWS.
+                </p>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 15px; align-items: center; margin-top: 12px; margin-bottom: 20px;"> <!--Redes sociales-->
+                <img src="tw.png" alt="Twitter" width="36px" height="20px">
+                <img src="in.png" alt="In" width="20px" height="20px">
+                <img src="git.png" alt="GitHub" width="25px" height="25px">
+            </div>
+        </div>
+    </div>
+    <div class="boton-contactar"> <!--Este div es el Contactar que sale abajo de todo a la derecha, lo coloque ahí con position absolute y agregandole position relative al body-->
+        <img src="sobre.png" alt="imagen del sobre" width="30px">
+        <p>Contactar</p>
+    </div>
+</body>
+</html>
